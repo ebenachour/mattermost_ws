@@ -1,0 +1,4 @@
+Flask==1.0.2
+mattermostdriver
+tabulate
+pyuwsgi==2.0.18.post0
