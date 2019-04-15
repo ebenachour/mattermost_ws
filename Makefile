@@ -1,6 +1,6 @@
 run_api:
 	# Launch uWSGI
-	uwsgi uwsgi.ini
+	uwsgi --ini uwsgi.ini 
 
 test:
 	# run tests
@@ -13,7 +13,6 @@ black:
 	# Apply black to all files
 	black .
 
-link:
+lint:
 	# check linters according to black
 	flake8
-

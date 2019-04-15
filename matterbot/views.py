@@ -7,7 +7,7 @@ bot = Blueprint("bot", __name__)
 
 
 @bot.route("/post", methods=["POST"])
-def index():
+def post_message():
     if not request.json:
         abort(HTTPStatus.BAD_REQUEST)
     request_data = request.get_json()
@@ -29,3 +29,8 @@ def index():
         )
     matbot.notify_mattermost(team_id, channel_id, request_data["message"])
     return ("OK", HTTPStatus.OK)
+
+@bot.route("/")
+def hello():
+    return ("OK", HTTPStatus.OK)
+
