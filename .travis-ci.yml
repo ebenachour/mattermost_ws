@@ -5,7 +5,7 @@ language: python
 python:
   - '3.7'
 
-# échoue dès qu'une erreur intervient
+# fail with the first error
 matrix:
   fast_finish: true
 
