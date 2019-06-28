@@ -1,4 +1,4 @@
-From python:3.7-slim-stretch
+FROM python:3.7-slim-stretch
 WORKDIR /home/matterbot
 ENV MAT_URL="tata" MAT_LOGIN="ett" MAT_PWD="pass" MAT_PORT=442
 RUN apt-get update && apt-get -y install make
