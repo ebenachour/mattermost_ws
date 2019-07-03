@@ -13,8 +13,8 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t travis-ci-build-demo .
   - docker images
-  - docker tag travis-ci-build-mattermost_ws $DOCKER_USERNAME/travis-ci-build-mattermost_ws
-  - docker push $DOCKER_USERNAME/travis-ci-build-mattermost_ws
-  - docker run --rm $DOCKER_USERNAME/travis-ci-build-mattermost_ws flake8
-  - docker run --rm $DOCKER_USERNAME/travis-ci-build-mattermost_ws test
-  - docker run --rm $DOCKER_USERNAME/travis-ci-build-mattermost_ws coverage
+  - docker tag travis-ci-build-mattermost_ws "$DOCKER_USERNAME"/travis-ci-build-mattermost_ws
+  - docker push "$DOCKER_USERNAME"/travis-ci-build-mattermost_ws
+  - docker run --rm "$DOCKER_USERNAME"/travis-ci-build-mattermost_ws flake8
+  - docker run --rm "$DOCKER_USERNAME"/travis-ci-build-mattermost_ws test
+  - docker run --rm "$DOCKER_USERNAME"/travis-ci-build-mattermost_ws coverage
